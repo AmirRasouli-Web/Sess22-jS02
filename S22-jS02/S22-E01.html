@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S22-E01</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(55, 55, 55);
+            >section{
+                width: 350px;
+                height: 450px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: space-between;
+                box-shadow: 0 0 5px 5px aqua;
+                border-radius: 5px;
+                padding: 1%;
+                >*{
+                    width: 100%;
+                    color: aqua;
+                }
+                >h1{
+                    text-align: center;
+                }
+                >button{
+                    width: 30%;
+                    height: 40px;
+                    outline: none;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: aqua;
+                    color: rgb(55, 55, 55);
+                    font-size: 22px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Age calculator</h1>
+            <div>
+                <h2>Days alive : <span id="day"></span></h2>
+            </div>
+            <div>
+                <h2>Hours alive : <span id="hour"></span></h2>
+            </div>
+            <div>
+                <h2>Minutes alive : <span id="min"></span></h2>
+            </div>
+            <div>
+                <h2>Seconds alive : <span id="sec"></span></h2>
+            </div>
+            <button onclick="calc()" title="Enter your age">Calc</button>
+        </section>
+    </main>
+    <script>
+        tst()
+        function tst(){
+            console.log('tst is here');
+        }
+        function calc(){
+            let age = prompt('Enter your age')
+            document.getElementById('day').innerText=age*365
+            document.getElementById('hour').innerText=age*365*24
+            document.getElementById('min').innerText=age*356*24*60
+            document.getElementById('sec').innerText=age*365*24*60*60
+            tst()
+        }
+    </script>
+</body>
+<script>
+    
+</script>
+</html>

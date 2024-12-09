@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S22-E06</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(56, 56, 56);
+            padding: 5%;
+            >*{
+                font-size: 22px;
+            }
+            >p{
+                color: aqua;
+                &::first-letter{
+                    font-size: 60px;
+                }
+            }
+            >button{
+                border: none;
+                outline: none;
+                padding: 10px;
+                background-color: aqua;
+                border-radius: 10px;
+                color: rgb(56, 56, 56);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Hello, my name is <strong id="prsn">Amir Rasouli</strong>, a front-end developer.</p>
+        <button onclick="chng()">Click to change</button>
+        <br>
+        <span class="spn">test1</span>
+        <span class="spn">test2</span>
+        <br>
+        <ul id="menu">
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+            <li>menu</li>
+        </ul>
+    </main>
+</body>
+<script>
+
+    const prsn = document.getElementById('prsn')
+    function chng() {
+        let name = prompt('Enter your name')
+        let lName = prompt('Enter your last name')
+        prsn.innerText=name + ' ' + lName
+        alert('change commit')
+    }
+
+    // end Id
+
+    const spn = document.getElementsByClassName('spn')
+    console.log(spn[0])
+    spn[0].innerText='new test'
+
+    // end ClassName
+
+    const tgName = document.getElementsByTagName('span')    
+    tgName[1].style.color='aqua'
+    
+
+    // end tgName
+
+    const nav = document.querySelector('#menu>li:nth-of-type(1)')
+    nav.style.color='green'
+
+    const menu = document.querySelectorAll('#menu>li')
+    menu[1].style.color='blue'
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S22-E08</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(77, 77, 77);
+            >nav{
+                width: 200px;
+                >ul{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    >li{
+                        list-style-type: none;
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 22px;
+                        color: aqua;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav>
+            <ul>
+                <li onclick="fnc(this, 0)">Menu</li>
+                <li onclick="fnc(this, 1)">Menu</li>
+                <li onclick="fnc(this, 2)">Menu</li>
+                <li onclick="fnc(this, 3)">Menu</li>
+                <li onclick="fnc(this, 4)">Menu</li>
+                <li onclick="fnc(this, 5)">Menu</li>
+                <li onclick="fnc(this, 6)">Menu</li>
+            </ul>
+        </nav>
+    </main>
+</body>
+<script>
+    const ul = document.querySelectorAll('ul>li')
+    let li = ul.length
+    const fnc = (z, n) => {
+        
+        z.style.borderBottom='2px solid black'
+        
+        // console.log(z.previousElementSibling)
+        // console.log(li)
+        
+        if(n != li-1){
+            z.nextElementSibling.style.color='red'
+            z.previousElementSibling.style.color='green'
+        }else if(n == li-1){
+            z.previousElementSibling.style.color='green'
+        }else if(n == 0){
+            z.nextElementSibling.style.color='red'
+        }
+    }
+</script>
+</html>

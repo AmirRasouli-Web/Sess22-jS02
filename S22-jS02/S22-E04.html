@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S22-E04</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h2 id="sum"></h2>
+            <!-- <button onclick="fnc1()">Calc</button> -->
+            <button onclick="alert(fnc1())">Calc</button>
+        </section>
+    </main>
+    <script>
+        function fnc1() {
+            let num1 = prompt('num1')
+            let num2 = prompt('num2')
+            return calc(num1, num2)
+        }
+        function calc(x, y) {
+            // alert(x*y)
+            return x*y
+        }
+    </script>
+</body>
+</html>
